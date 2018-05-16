@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://s1.ax2x.com/2018/05/16/xphxn.jpg');
+  background-size: cover;
+  opacity: .7;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  color: #333;
+}
+.title {
+  height: 50px;
+}
+.date, .city {
+  height: 30px;
+}
+.temperature, .weather, .wind {
+  height: 30px;
+}
+.today-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 30px #aaa;
+  margin-bottom: 30px;
+}
+.today-info li{
+  padding: 10px;
+  margin: 10px;
+}
+.dress {
+  border-radius: 10px;
+  box-shadow: 1px 2px 30px #aaa;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.future {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.future li {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 1px 2px 30px #aaa;
+}
+.future-date, .future-week {
+  font-weight: bold;
+  font-size: 16px;
+  height: 22px;
+  color: #333;
+}
+.future-week {
+  height: 30px;
+}
+.future-weather, .future-temperature {
+  font-size: 14px;
+  height: 20px;
+  color: #aaa;
+}
+
+

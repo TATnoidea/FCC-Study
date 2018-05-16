@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,82 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-  <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+  <div class="bg">
+  </div>
+  <div class="content"></div>
+
+  <script id="tpl" type="text/x-template">
+    <h2 class="title">天气指南</h2>
+    <h3 class="date">
+      <%= data.today.date_y %>
+    </h3>
+    <h3 class="city">
+      <%= data.today.city %>
+    </h3>
+    <p class="temperature">
+      <%= data.today.temperature %>
+    </p>
+    <p class="weather">
+      <%= data.today.weather %>
+    </p>
+    <p class="wind">
+      <%= data.today.wind %>
+    </p>
+    <ul class="today-info">
+      <li>
+        <h4>运动指数</h4>
+        <p>
+          <%= data.today.exercise_index %>
+        </p>
+      </li>
+      <li>
+        <h4>洗涤指数</h4>
+        <p>
+          <%= data.today.wash_index %>
+        </p>
+      </li>
+      <li>
+        <h4>紫外线强度指数</h4>
+        <p>
+          <%= data.today.uv_index %>
+        </p>
+      </li>
+      <li>
+        <h4>外出指数</h4>
+        <p>
+          <%= data.today.travel_index %>
+        </p>
+      </li>
+    </ul>
+    <div class="dress">
+      <h4>穿衣指数</h4>
+      <p>
+        <%= data.today.dressing_advice %>
+      </p>
+    </div>
+    <ul class="future">
+      <% for( var i = 0; i < data.future.length; i++ ) { %>
+        <li>
+          <h4 class="future-date">
+            <%:= data.future[i].date %>
+          </h4>
+          <h4 class="future-week">
+            <%:= data.future[i].week %>
+          </h4>
+          <p class="future-temperature">
+            <%:= data.future[i].temperature %>
+          </p>
+          <p class="future-weather">
+            <%:= data.future[i].weather %>
+          </p>
+        </li>
+        <% } %>
+    </ul>
+  </script>
+  <script src="https://cdn.bootcss.com/template_js/0.7.1/template.min.js"></script>
   <script src='js/index.js'></script>
 </body>
+
 </html>
